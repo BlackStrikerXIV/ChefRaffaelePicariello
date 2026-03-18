@@ -525,7 +525,8 @@ const HomePage = () => (
 
 export default function App() {
   return (
-    <BrowserRouter>
+    // AGGIUNGI IL BASENAME QUI SOTTO
+    <BrowserRouter basename="/ChefRaffaelePicariello"> 
       <ScrollToTop />
       <div className="min-h-screen">
         <Navbar />
