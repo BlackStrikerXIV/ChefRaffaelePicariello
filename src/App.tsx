@@ -29,9 +29,9 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/', type: 'link' },
     { name: 'Menu', path: '/menu', type: 'link' },
-    { name: 'Chi Sono', path: '/#chi-sono', type: 'anchor' },
+    { name: 'Costruiamo la tua esperienza', path: '/costruiamo', type: 'link' },
+    { name: 'Gift Card', path: '/gift', type: 'link' },
     { name: 'Eventi', path: '/eventi', type: 'link' },
-    { name: 'Contatti', path: '/#contatti', type: 'anchor' },
   ];
 
   return (
