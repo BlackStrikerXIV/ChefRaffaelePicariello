@@ -9,7 +9,7 @@
     "start": "node server.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "deploy": "gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
