@@ -16,7 +16,6 @@ const EventsPage = () => {
       price: "95€",
       image: "img/copertina_te.jpeg",
       gallery: [
-        "img/copertina_te.jpeg",
         "img/te1.jpeg",
         "img/te2.jpeg",
         "img/te3.jpeg",
