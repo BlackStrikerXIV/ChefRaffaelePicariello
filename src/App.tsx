@@ -107,7 +107,7 @@ const Hero = () => (
     <img 
       src={`${import.meta.env.BASE_URL}img/sfondo_4.jpeg`} 
       alt="Chef at work" 
-      className="w-full h-full object-cover opacity-50" // Ora questo scurirà l'immagine
+      className="w-full h-full object-cover object-[center_40%] opacity-50" // Ora questo scurirà l'immagine
       onError={(e) => {
         e.currentTarget.src = "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=2000";
       }}
