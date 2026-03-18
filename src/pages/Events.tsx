@@ -11,7 +11,7 @@ const EventsPage = () => {
     {
       date: "14 Giu",
       title: "Truffle Experience",
-      location: "Castel di Giudo (RM)",
+      location: "Castel di Guido (RM)",
       time: "7:00 - 16:00",
       price: "95€",
       image: "img/copertina_te.jpeg",

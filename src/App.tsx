@@ -100,28 +100,41 @@ const Navbar = () => {
 
 const Hero = () => (
   <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
-    <div className="absolute inset-0 z-0">
-      <img 
-        src={`${import.meta.env.BASE_URL}img/sfondo_3.jpeg`} 
-        alt="Chef at work" 
-        className="w-full h-full object-cover opacity-60"
-        referrerPolicy="no-referrer"
-        onError={(e) => {
-          e.currentTarget.src = "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=2000";
-        }}
-      />
-{/*       <div className="absolute inset-0 bg-gradient-to-b from-chef-cream/10 via-transparent to-chef-cream/90"></div> */}
+  {/* 1. Aggiungi bg-black qui sopra */}
+  <div className="absolute inset-0 bg-black"> 
+    
+    {/* 2. Il gradiente deve stare SOPRA l'immagine, quindi lo spostiamo dopo */}
+    <img 
+      src={`${import.meta.env.BASE_URL}img/sfondo_4.jpeg`} 
+      alt="Chef at work" 
+      className="w-full h-full object-cover opacity-50" // Ora questo scurirà l'immagine
+      onError={(e) => {
+        e.currentTarget.src = "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=2000";
+      }}
+    />
+
+    {/* 3. Il gradiente per i testi */}
     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
-    </div>
+  </div>
     
     <div className="relative z-10 text-center px-4">
       <motion.span 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="block text-lg uppercase tracking-[0.5em] mb-6 text-chef-gold font-bold drop-shadow-sm"
+        className="block text-lg uppercase tracking-[0.5em] mb-6 text-chef-brown font-bold drop-shadow-sm"
+        /* className="block text-lg uppercase tracking-[0.5em] mb-6 text-chef-brown font-bold [text-shadow:0.5px_0.5px_0px_rgba(255,255,255,0.9),-0.5px_-0.5px_0px_rgba(255,255,255,0.9),0.5px_-0.5px_0px_rgba(255,255,255,0.9),-0.5px_0.5px_0px_rgba(255,255,255,0.9)]" */
+        /* className="block text-lg uppercase tracking-[0.5em] mb-6 text-chef-brown font-bold [text-shadow:0.5px_0.5px_0px_#5D4037,-0.5px_-0.5px_0px_#5D4037,0.5px_-0.5px_0px_#5D4037,-0.5px_0.5px_0px_#5D4037]" */
       >
-        Private Chef Experience
+      <div className="flex flex-col items-center w-full">
+        {/* La Linea */}
+        <div className="w-12 h-[2px] bg-chef-gold mb-4 opacity-80"></div>
+        
+        {/* Il Testo */}
+        <span className="text-sm md:text-base uppercase tracking-[0.6em] text-chef-gold font-bold pr-[0.6em]">
+          Private Chef Experience
+        </span>
+      </div>
       </motion.span>
       <motion.h1 
         initial={{ opacity: 0, y: 20 }}
@@ -144,7 +157,7 @@ const Tile = ({ title, icon: Icon, description, link, delay = 0 }) => (
     transition={{ duration: 0.6, delay }}
     className="group relative h-[400px] overflow-hidden bg-chef-dark text-chef-cream cursor-pointer"
   >
-    <Link to={link}>
+    <Link to={link} className="block w-full h-full">
       <div className="absolute inset-0 opacity-40 group-hover:scale-110 transition-transform duration-700">
         <img 
           src={`https://images.unsplash.com/photo-${link === '/menu' ? '1504674900247-0877df9cc836' : link === '/costruiamo' ? '1559339352-11d035aa65de' : link === '/gift' ? '1513201099705-a9746e1e201f' : '1511795409834-ef04bbd61622'}?auto=format&fit=crop&q=80&w=800`} 
@@ -155,10 +168,13 @@ const Tile = ({ title, icon: Icon, description, link, delay = 0 }) => (
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-chef-dark via-chef-dark/20 to-transparent"></div>
       
-      <div className="absolute inset-0 p-8 flex flex-col items-center text-center">
-        <div className="flex-1 flex flex-col justify-center items-center">
-          <div className="mb-6 text-chef-gold group-hover:scale-110 transition-transform duration-500">
-            <Icon size={40} strokeWidth={1} />
+      <div className="absolute inset-0 p-8 flex flex-col justify-between items-center text-center z-20">
+{/*         <div className="flex-1 flex flex-col justify-center items-center w-full"> */}
+<div className="flex-1 flex flex-col pt-1 items-center w-full">
+          <div className="text-chef-gold group-hover:scale-110 transition-transform duration-500 flex items-center justify-center">
+<div className="h-20 flex items-center justify-center text-chef-gold group-hover:scale-110 transition-transform duration-500">
+  <Icon size={40} strokeWidth={1} />
+</div>
           </div>
           <h3 className="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight group-hover:text-chef-gold transition-colors duration-500">
             {title}
@@ -167,8 +183,10 @@ const Tile = ({ title, icon: Icon, description, link, delay = 0 }) => (
             {description}
           </p>
         </div>
-        <div className="mt-8 flex items-center text-xs uppercase tracking-[0.2em] font-bold group-hover:text-chef-gold transition-colors">
-          Scopri di più <ChevronRight size={14} className="ml-1" />
+        <div className="flex items-center justify-center text-xs uppercase tracking-[0.2em] font-bold group-hover:text-chef-gold transition-colors">
+          <span className="inline-flex items-center">
+            Scopri di più <ChevronRight size={14} className="ml-1.5 transition-transform group-hover:translate-x-1" />
+          </span>
         </div>
       </div>
     </Link>
@@ -387,7 +405,7 @@ const Footer = () => (
       <div className="text-center md:text-left">
         <h5 className="text-[10px] uppercase tracking-widest font-bold mb-3 text-chef-gold">Contatti</h5>
         <ul className="space-y-1 text-sm font-light opacity-80 mb-4 leading-tight">
-          <li>Email: Picarielloraffaele93@gmail.com</li>
+          <li>Email: picarielloraffaele93@gmail.com</li>
           <li>Tel: +39 366-3491506</li>
         </ul>
         <div className="flex justify-center md:justify-start space-x-4">
@@ -457,13 +475,18 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="text-center md:text-right">
+{/*       <div className="text-center md:text-right">
         <h4 className="text-xl font-serif mb-2">Raffaele Picariello</h4>
-{/*         <p className="text-xs font-light opacity-60 ml-auto max-w-xs leading-tight"> */}
-        <p className="text-xs font-light opacity-60 mx-auto md:ml-auto max-w-xs leading-tight">
+        <p className="text-xs font-light opacity-60 ml-auto max-w-xs leading-tight"> 
           Esperienze culinarie private, eventi esclusivi e consulenza gastronomica d'eccellenza.
         </p>
-      </div>
+      </div> */}
+    <div className="flex flex-col items-center md:items-end text-center md:text-right">
+      <h4 className="text-xl font-serif mb-2">Raffaele Picariello</h4>
+      <p className="text-xs font-light opacity-60 max-w-xs leading-tight">
+        Esperienze culinarie private, eventi esclusivi e consulenza gastronomica d'eccellenza.
+      </p>
+    </div>
     </div>
     <div className="max-w-7xl mx-auto mt-10 pt-4 border-t border-chef-cream/10 flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-widest opacity-40">
       <p>© 2024 Raffaele Picariello Private Chef. All rights reserved.</p>
