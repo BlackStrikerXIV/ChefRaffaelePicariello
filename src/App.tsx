@@ -102,7 +102,7 @@ const Hero = () => (
   <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
     <div className="absolute inset-0 z-0">
       <img 
-        src="/img/sfondo_3.jpeg" 
+        src="img/sfondo_3.jpeg" 
         alt="Chef at work" 
         className="w-full h-full object-cover opacity-60"
         referrerPolicy="no-referrer"
@@ -372,7 +372,7 @@ const Footer = () => (
           <div className="absolute -inset-4 bg-chef-gold/20 rounded-full blur-2xl group-hover:bg-chef-gold/30 transition-all duration-500"></div>
           <div className="relative w-48 h-48 rounded-full overflow-hidden border-2 border-chef-gold/50 shadow-2xl bg-white flex items-center justify-center hover:scale-105 transition-transform duration-500">
             <img 
-              src="/img/cartoon.jpeg"
+              src="img/cartoon.jpeg"
               alt="Chef Cartoon" 
               className="w-full h-full object-cover scale-125 translate-y-2"
               referrerPolicy="no-referrer"

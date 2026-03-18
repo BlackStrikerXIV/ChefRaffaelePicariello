@@ -14,7 +14,7 @@ const MenuPage = () => {
   const menus = [
     {
       title: "Origini in evoluzione",
-      image: "/img/origini_in_evoluzione.jpeg",
+      image: "img/origini_in_evoluzione.jpeg",
       objectPosition: "center 30%",
       sections: [
         { name: "Entree di benvenuto", items: ["Gallina rincretinita", "Frittata trippata"] },
@@ -27,7 +27,7 @@ const MenuPage = () => {
     },
     {
       title: "Radici e foglie",
-      image: "/img/radici_e_foglie.jpeg",
+      image: "img/radici_e_foglie.jpeg",
       sections: [
         { name: "Entree di benvenuto", items: ["Farinata di ceci con yogurt e limone", "Zucca crispy mayo al lime"] },
         { name: "Pani e lievitati", items: ["Grissini con cristalli di sale maldon", "Focaccella di patate e rosmarino"] },
@@ -39,7 +39,7 @@ const MenuPage = () => {
     },
     {
       title: "Menu degustazione di pesce",
-      image: "/img/menu_degustazione_di_pesce.PNG",
+      image: "img/menu_degustazione_di_pesce.PNG",
       sections: [
         { name: "Entree di benvenuto", items: ["Lollipop di baccala mantecato con mayo alla menta"] },
         { name: "Pani e lievitati", items: ["Grissini con cristalli di sale maldon", "Focaccella di patate e rosmarino"] },
@@ -51,7 +51,7 @@ const MenuPage = () => {
     },
     {
       title: "Essenza romana",
-      image: "/img/essenza_romana.jpeg",
+      image: "img/essenza_romana.jpeg",
       sections: [
         { name: "Entree di benvenuto", items: ["Rocher di coda alla vaccinara"] },
         { name: "Pani e lievitati", items: ["Grissino all'amatriciana", "Focaccella di patate e rosmarino", 'Pane "casereccio"'] },
@@ -63,7 +63,7 @@ const MenuPage = () => {
     },
     {
       title: "Viaggio nel gusto per due",
-      image: "/img/viaggio_nel_gusto_per_due.jpeg",
+      image: "img/viaggio_nel_gusto_per_due.jpeg",
       objectPosition: "center 20%",
       sections: [
         { name: "Entree di benvenuto", items: ["Tamago sando con branzino al limone e shiso"] },

@@ -14,16 +14,16 @@ const EventsPage = () => {
       location: "Castel di Giudo (RM)",
       time: "7:00 - 16:00",
       price: "95€",
-      image: "/img/copertina_te.jpeg",
+      image: "img/copertina_te.jpeg",
       gallery: [
-        "/img/copertina_te.jpeg",
-        "/img/te1.jpeg",
-        "/img/te2.jpeg",
-        "/img/te3.jpeg",
-        "/img/te4.jpeg",
-        "/img/te5.jpeg",
-        "/img/te6.jpeg",
-        "/img/te7.jpeg"
+        "img/copertina_te.jpeg",
+        "img/te1.jpeg",
+        "img/te2.jpeg",
+        "img/te3.jpeg",
+        "img/te4.jpeg",
+        "img/te5.jpeg",
+        "img/te6.jpeg",
+        "img/te7.jpeg"
       ]
     }
   ];
