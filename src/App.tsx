@@ -186,7 +186,7 @@ const About = () => (
       >
         <div className="relative">
           <img 
-            src="/img/menu_origini2.jpg"
+            src="img/menu_origini2.jpg"
             alt="Chef Raffaele Picariello" 
             className="w-full aspect-[4/5] object-cover rounded-sm hover:scale-105 transition-all duration-700 shadow-2xl"
             referrerPolicy="no-referrer"
